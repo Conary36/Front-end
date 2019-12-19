@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import UserCard from './UserCard';
 
 
 export default function UserList(){
@@ -7,7 +8,7 @@ export default function UserList(){
 
     const [users, setUsers] = useState([]);
     const [searchItems, setSearchItems] = useState('');
-    const [searchResults, setSearchResults] = useState(users)
+    const [searchResults, setSearchResults] = useState(users);
 
     const handleChange = event =>{
         setSearchResults(event.target.value);
@@ -16,7 +17,7 @@ export default function UserList(){
     useEffect(()=>{
         getUsers = () =>{
             axios
-                .get('https://docs.google.com/spreadsheets/d/1cbJQL1JbO5pAV4mss1yH0uMp58lF8TkKZt6NPkF9NLg/edit#gid=0')
+                .get('')
                 .then(res =>{
                     console.log(res.data);
                     setUsers(res.data.results);
