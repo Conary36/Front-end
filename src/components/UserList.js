@@ -11,7 +11,7 @@ export default function UserList(){
     const [searchResults, setSearchResults] = useState(users);
 
     const handleChange = event =>{
-        setSearchResults(event.target.value);
+        setSearchItems(event.target.value);
     }
 
     useEffect(()=>{
@@ -43,7 +43,10 @@ export default function UserList(){
         <section>
             <SearchForm searchItems={searchItems} handleChange={handleChange}/>
 
-            <UserCard avatar={users.img} id={users.id} username={users.username} owner_first_name={users.owner_first_name} owner_last_name={users.owner_last_name} business_name={users.business_name}/>
+            {searchResults.map(e =>(
+                <UserCard avatar_url={e.image} id={e.id} email={e.email} username={e.username} owner_first_name={e.fname} owner_last_name={e.lname} business_name={e.business.name} />
+            ))}
+           
         </section>
     )
 }

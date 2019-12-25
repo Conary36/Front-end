@@ -25,7 +25,7 @@ export default function SearchForm({searchTerms, handleChange}){
         };
         console.log(favUser)
         const people = favUser.filter(e => {
-            return e.name.toLowerCase().includes(userTerms.toLocaleLowerCase());
+            return e.name.toLowerCase().includes(userTerms.toLowerCase());
         });
         newUsers();
         setUserResults(people);
