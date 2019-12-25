@@ -16,14 +16,16 @@ export default function Header (){
     `
 
     return(
+    
         <HeaderStyling>
-        <Link to='/'>Sign Up</Link>
-        <Link to='/users'>Members</Link>
-        <Link to='/search'>Search</Link>
+            <Link to='/'>Sign Up</Link>
+            <Link to='/users'>Members</Link>
+            <Link to='/search'>Search</Link>
 
-        <Route exact path='/' component={UserForm}></Route>
-        <Route exact path='/users' component={UserList}></Route>
-        <Route exact path='/search' component={SearchForm}></Route>
+            <Route exact path='/' component={UserForm}></Route>
+            <Route exact path='/users' component={UserList}></Route>
+            <Route exact path='/search' component={SearchForm}></Route>
         </HeaderStyling>
+
     )
-}
+};
