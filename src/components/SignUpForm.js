@@ -35,7 +35,7 @@ export default class UserForm extends Component{
     render() {
         const { email, username, owner_first_name,owner_last_name,business_name } = this.state;
         return (
-            <form>
+            <form className="inputFields">
                 <input
                     type="text"
                     email="email"

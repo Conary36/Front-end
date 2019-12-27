@@ -9,7 +9,7 @@ export default function Header (){
 
     const HeaderStyling = styled.header`
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-around;
         flex-direction: row;
 
         
